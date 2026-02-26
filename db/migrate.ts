@@ -22,7 +22,7 @@ async function migrate() {
       CREATE INDEX IF NOT EXISTS idx_contact_linked_id   ON "Contact"("linkedId")     WHERE "deletedAt" IS NULL;
     `);
 
-    console.log("✅ Migration complete — Contact table is ready.");
+    console.log("migration complete Contact table is ready.");
   } finally {
     client.release();
     await pool.end();
